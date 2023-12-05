@@ -3,19 +3,5 @@
 {% block titulo %} Menu Principal - Chuky PB {% endblock %}
 
 {% block contenido %}
-
-   <h1>Pagina de inicio</h1>
-
-   <p> Bienvenido a la pagina de inicio de la aplicacion </p>
-
-   {% if user.is_authenticated %}
-
-      <h3> Hola {{user.username}} <a href="{% url 'logout' %}">Cerrar Sesión</a> </h3>
-   
-   {% else %}
-
-      <h3> Porfavor inicie sesión <a href="{% url 'login' %}">Iniciar Sesión</a> </h3>
-
-   {% endif %}
-
+   <h1>Probando el panel</h1>
 {% endblock %}

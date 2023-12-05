@@ -72,6 +72,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'inventarioVeterinariaJavierySebastian.wsgi.application'
 
 import pymysql
+pymysql.version_info = (1, 4, 6, 'final', 0)
 pymysql.install_as_MySQLdb()
 
 # Database
@@ -130,7 +131,16 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 """ Pagina POST Login """
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/panelAdmin"
 
 """ Pagina POST Logout """
 LOGOUT_REDIRECT_URL = "/"
+
+""" Pagina de Login """
+LOGIN_URL = "/cuentas/login/"
+
+""" Pagina de Logout """
+LOGOUT_URL = "/cuentas/logout/"
+
+""" Pagina de error de Login """
+LOGIN_ERROR_URL = "/cuentas/login-error/"
